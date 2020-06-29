@@ -62,6 +62,6 @@ ___
 ```
 ### 恢复被删除的文件(未commit)
 ```bash
-    git restore --staged <文件名> #把被删除的文件取消暂存区的操作
+    git restore --staged <文件名> #把被删除的文件取消暂存区的操作 
     git checked -- <文件名> #把被删除的文件恢复
 ```
