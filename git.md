@@ -79,6 +79,7 @@ ___
     git log [-3]#可选: -N 显示N条
     git log --pretty=oneline #只显示commitID 和message
     git log --pretty=format:"%h - %an,%ar : %s" #只显示commitID 和message
+    git log --graph #图形化显示
 ```
 ___
 ```
@@ -143,4 +144,15 @@ ___
 ```bash
     git merge --abort
 ```
-
+### git 回退版本
+```bash
+    git reset --hard HEAD^ # 回退1个版本
+    git reset --hard HEAD~1 #回退N个版本 ~N
+    git reset --hard <commitID> #回退到某个版本
+```
+### git 选择版本
+```bash
+    git reflog #查看操作日志
+    # 找到commit日志 
+    git reset --hard <commitID> #重新回到这个版本
+```
