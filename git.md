@@ -64,7 +64,7 @@ ___
 ### 恢复被删除的文件(未commit)
 ```bash
     git restore --staged <文件名> #把被删除的文件 暂存区的操作 恢复到工作区
-    git checked -- <文件名> #把被删除的文件恢复
+    git checkout -- <文件名> #把被删除的文件恢复
 ```
 ### git 修改文件名字
 ```bash
@@ -94,4 +94,31 @@ ___
 
 ```
 ___
+### git 忽略某些文件不提示未加入仓库
+创建名为: .gitignore 的文件
+在里面写上需要忽略的文件名 或者文件夹名
+```bash
+    # 这样会忽略motest.txt 和target 文件夹  
+    notest.txt
+    target/
+    # .xml结尾的也会忽略,但是aaa.xml不会
+    *.xml
+    !aaa.xml
+    # 子目录下的aa.txt忽略
+    /*/aa.txt 
+    # 所有目录下的aa.txt 都忽略
+    /**/aa.txt 
+```
+### 查看分支
+```bash
+    git branch
+```
+### 创建分支
+```bash
+    git branch <分支名字>
+```
+### 切换分支
+```bash
+    git checkout <分支名字>
+```
 
