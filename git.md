@@ -24,6 +24,7 @@ ___
 ### 添加到暂存区
 ```bash
     git add <文件名>
+    git add . (把当前文件夹和子文件夹的所有文件都加入暂存区)
 ```
 ### 从暂存区移除
 ```bash
@@ -32,7 +33,7 @@ ___
 ```
 ### 提交到仓库
 ```bash
-    git commit (全部提交)-a
+    git commit (强制提交)-a
     git commit <文件名>
     git commit <文件名> -m "需要写的备注"
 ```
@@ -62,6 +63,35 @@ ___
 ```
 ### 恢复被删除的文件(未commit)
 ```bash
-    git restore --staged <文件名> #把被删除的文件取消暂存区的操作 
+    git restore --staged <文件名> #把被删除的文件 暂存区的操作 恢复到工作区
     git checked -- <文件名> #把被删除的文件恢复
 ```
+### git 修改文件名字
+```bash
+    git mv <旧文件名> <新文件名>
+```
+### 修改提交的日志message
+```bash
+    git commit --amend -m 'XXX'
+```
+### 查看提交日志
+```bash
+    git log [-3]#可选: -N 显示N条
+    git log --pretty=oneline #只显示commitID 和message
+    git log --pretty=format:"%h - %an,%ar : %s" #只显示commitID 和message
+```
+___
+```
+    7ad84d4 - xiaokedamowang,36 minutes ago : 重新写message
+    160e4aa - xiaokedamowang,39 minutes ago : 提交md
+    c561b4c - xiaokedamowang,41 minutes ago : 删除测试
+    a9a654a - xiaokedamowang,69 minutes ago : aaa啊啊啊
+    99d5b95 - xiaokedamowang,85 minutes ago : 第三次提交
+    61d7afe - xiaokedamowang,86 minutes ago : di er ci tijiao
+    0cbec06 - xiaokedamowang,88 minutes ago : di er ci tijiao
+    90dd778 - xiaokedamowanmg,2 hours ago : di yi ci tijiao
+    cdfcdd2 - xiaokedamowanmg,2 hours ago : 第一次提交
+
+```
+___
+
