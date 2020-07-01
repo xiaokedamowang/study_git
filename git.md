@@ -141,6 +141,6 @@ ___
 ```
 ### 终止合并
 ```bash
-    git merge—abort
+    git merge --abort
 ```
 
