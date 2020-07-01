@@ -139,4 +139,8 @@ ___
 ```bash
     git branch -v
 ```
+### 终止合并
+```bash
+    git merge—abort
+```
 
