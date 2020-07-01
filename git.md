@@ -121,4 +121,19 @@ ___
 ```bash
     git checkout <分支名字>
 ```
+### 删除分支
+```bash
+    git branch -d <分支名字>
+    # 如果要删除没有被合并的分支
+    git branch -D <分支名字>
+```
+### 创建分支并且直接切换到分支
+```bash
+    git checkout -b <新的分支名字>
+```
+### 合并分支
+```bash
+    git merge <分支名字>
+```
+###
 
