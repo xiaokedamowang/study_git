@@ -238,3 +238,7 @@ ___
     git diff --cached
     git diff --cached <commitId>
 ```
+### 推送到远程仓库
+```bash
+    git remote add origin <URL>
+```
