@@ -173,3 +173,68 @@ ___
 ```bash
     git stash list
 ```
+### 临时保存 恢复
+```bash
+    git stash pop #恢复上一个临时保存  并且删除
+    git stash apply #合并多个临时保存
+    git stash apply stash@{0} # {N} N是数字 从git stash list 查看
+```
+### 删除临时保存
+```bash
+    git stash drop stash@{0} # {N} N是数字
+```
+### 创建标签
+```bash
+    git tag <标签名> # 简单标签
+    git tag -a <标签名> -m <备注信息> # 详细标签
+```
+### 查看标签
+```bash
+    git tag # 查看标签    
+    git tag -l 'XXX' # 精确查找
+    git tag -l '*X' # 模糊查找
+```
+### 删除标签
+```bash
+    git tag -d <标签名>
+```
+### 查看文件修改者
+```bash
+    git blame <文件名>
+```
+### git diff (不加参数代表 工作区和暂存区全部的文件 做比较)
+### git diff <文件名> ( 工作区和暂存区 单个文件 做比较)
+```bash
+    $ git diff # 命令
+    # a/test01.txt 代表暂存区的文件
+    # b/test01.txt 代表工作区的文件
+    diff --git a/test01.txt b/test01.txt
+    index 5f2f16b..ea6fb96 100644
+    --- a/test01.txt
+    +++ b/test01.txt
+    # -1 -代表暂存区的文件 1代表有1行
+    # +1 +代表工作区的文件 4代表有4行
+    @@ -1 +1,4 @@
+    # 代表工作区比暂存区多一行  000
+    +000
+    # 没有符号代表一样
+    1111
+    # 代表工作区比暂存区多一行  222
+    +222
+    # 代表工作区比暂存区多一行  333
+    +333
+    # 代表工作区比暂存区少一行  444
+    -444
+    # 代表工作区比暂存区多一行  (空行)
+    +
+```
+### git diff <commitId> (加上commitId 代表 工作区和提交的快照 作比较)
+```bash
+    git diff HEAD # 当前工作区 和 最近一次提交 比较
+    git diff <commitId> # 当前工作区 和 某次提交 比较
+```
+### git diff --cached (不加参数 代表 暂存区 和 最新的提交 做比较)
+```bash
+    git diff --cached
+    git diff --cached <commitId>
+```
