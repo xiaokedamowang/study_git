@@ -30,6 +30,7 @@ ___
 ```bash
     git rm --cached <文件名>
     git restore --staged <文件名>
+    git reset HEAD <文件名>
 ```
 ### 提交到仓库
 ```bash
@@ -64,6 +65,7 @@ ___
 ### 恢复被删除的文件(未commit)
 ```bash
     git restore --staged <文件名> #把被删除的文件 暂存区的操作 恢复到工作区
+    # git reset HEAD <文件名>  该命令也可以
     git checkout -- <文件名> #把被删除的文件恢复
 ```
 ### git 修改文件名字
@@ -117,6 +119,7 @@ ___
 ### 创建分支
 ```bash
     git branch <分支名字>
+    git branch <分支名字> <commitId> # 创建分支 基于某次提交
 ```
 ### 切换分支
 ```bash
@@ -149,10 +152,24 @@ ___
     git reset --hard HEAD^ # 回退1个版本
     git reset --hard HEAD~1 #回退N个版本 ~N
     git reset --hard <commitID> #回退到某个版本
+    git checkout <commitId> #切换到某次提交点  处于游离状态
 ```
 ### git 选择版本
 ```bash
     git reflog #查看操作日志
     # 找到commit日志 
     git reset --hard <commitID> #重新回到这个版本
+```
+### 分支 改名
+```bash
+    git branch -m <分支名> <新分支名>
+```
+### 临时保存
+```bash
+    git stash
+    git stash save <备注说明> # 临时保存 并且添加说明
+```
+### 查看临时保存列表
+```bash
+    git stash list
 ```
