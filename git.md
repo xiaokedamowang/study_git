@@ -241,4 +241,5 @@ ___
 ### 推送到远程仓库
 ```bash
     git remote add origin <URL>
+    git push -u origin master
 ```
