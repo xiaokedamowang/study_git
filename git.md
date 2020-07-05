@@ -248,3 +248,9 @@ ___
     git remote show #查看全部的仓库
     git remote show origin(仓库名) #查看origin的详细信息
 ```
+### 配置git仓库ssh
+先修改.git/config里的url 改成git的ssh地址
+```bash
+    ssh-keygen #生成密钥对 默认在 用户目录下的 .ssh 目录里
+    # 然后把公钥配置到仓库中
+```
