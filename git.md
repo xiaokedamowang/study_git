@@ -243,3 +243,8 @@ ___
     git remote add origin <URL>
     git push -u origin master
 ```
+### 查看远程仓库信息
+```bash
+    git remote show #查看全部的仓库
+    git remote show origin(仓库名) #查看origin的详细信息
+```
