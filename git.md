@@ -115,6 +115,8 @@ ___
 ### 查看分支
 ```bash
     git branch
+    git branch -a (包括远程分支)
+    git branch -av (包括远程分支 并且显示最后1次提交的commitId)
 ```
 ### 创建分支
 ```bash
